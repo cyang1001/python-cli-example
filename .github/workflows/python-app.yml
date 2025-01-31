@@ -8,6 +8,20 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      createRelease:
+        description: 'Create a release'
+        required: false
+        type: boolean
+      deployEnv:
+        description: 'Deployment environment'
+        type: string
+        required: false
+      deployVersion:
+        description: 'Deployment version'
+        type: string
+        required: false
 
 permissions:
   contents: read
